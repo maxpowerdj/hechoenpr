@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hecho en Puerto Rico</title>
+  
+  <!-- 
+    Hecho en Puerto Rico Banner
+    Created by Angel Ortiz, 2025
+    Licensed under the MIT License
+    https://github.com/your-username/your-repo
+  -->
+
+  <style>
+    /* Reset basic margin and set a base font */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Main top banner styling */
+    .top-banner {
+      background-color: #0050a4; /* Deep Puerto Rico blue */
+      color: #fff;               /* White text for contrast */
+      padding: 10px 20px;        /* Inner spacing */
+      position: relative;        /* Allows absolute positioning of the toggle button */
+      text-align: center;        /* Center the heading text */
+    }
+
+    .top-banner h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* Toggle button for accordion (up/down arrow) */
+    .accordion-toggle {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Hidden section that expands when the accordion is opened */
+    .accordion-content {
+      background-color: #e0e7ff; /* Light pastel blue for visual separation */
+      color: #000;
+      padding: 15px 20px;
+      display: none;            /* Hidden by default */
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-content p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive behavior: smaller font for mobile devices */
+    @media (max-width: 600px) {
+      .top-banner h1 {
+        font-size: 1rem;
+      }
+
+      .accordion-content {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main top banner with message and toggle button -->
+  <div class="top-banner">
+    <h1>🇵🇷 Hecho en Puerto Rico – Un esfuerzo por apoyar productos locales</h1>
+    <button class="accordion-toggle" onclick="toggleAccordion()">▼</button>
+  </div>
+
+  <!-- Collapsible accordion content -->
+  <div class="accordion-content" id="accordion">
+    <p>
+      “Hecho en Puerto Rico” celebra la innovación, calidad y orgullo de los productos y servicios desarrollados en nuestra Isla.
+      Este sitio web forma parte de una iniciativa para promover el talento local y fortalecer nuestra economía. ¡Gracias por apoyar lo nuestro!
+    </p>
+  </div>
+
+  <script>
+    /**
+     * Toggles the accordion open/closed when the arrow button is clicked.
+     * If the accordion is visible, hide it and show ▼
+     * If it's hidden, show it and update the arrow to ▲
+     */
+    function toggleAccordion() {
+      const content = document.getElementById("accordion");
+      const button = document.querySelector(".accordion-toggle");
+
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        button.textContent = "▼";
+      } else {
+        content.style.display = "block";
+        button.textContent = "▲";
+      }
+    }
+  </script>
+
+</body>
+</html>
